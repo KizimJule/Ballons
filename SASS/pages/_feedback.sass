@@ -1,0 +1,59 @@
+.section-feedback
+    position: relative
+    text-align: center
+    padding-top: 8rem
+    padding-bottom: 8rem
+    padding: 8rem
+    background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%)
+
+.title-secondary_color
+    color: $color-white
+    margin-bottom: 9.5rem
+
+.feedback-card
+    text-align: left
+    width: 82%
+    background: rgba(255, 255, 255, 0.8)
+    box-shadow: $box-shadow-active
+    margin: 0 auto
+    padding: 5rem 12rem
+    @include clearfix
+    transform: skewX(335deg)
+    & > *
+        transform: skewX(-335deg)
+    &:not(:last-child)
+        margin-bottom: 8rem 
+    &__img
+        width: 16.7rem
+        height: 16.7rem
+        background: #C4C4C4
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%)
+        -webkit-shape-outside: circle(50% at 50% 50%)
+        margin-right: 4rem
+        overflow: hidden
+        position: relative
+        img
+            height: 100%
+            transform: scale(1.2)
+            backface-visibility: hidden
+            transition: all .5s
+    &__name
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -20%)
+        font-size: 2rem
+        color: $color-white
+        opacity: 0
+        backface-visibility: hidden
+        transition: all .5s
+    &:hover &__name
+            opacity: 1
+            transform: translate(-50%, -50%)
+    &:hover img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(60%)
+
+

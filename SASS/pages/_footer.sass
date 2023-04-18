@@ -1,0 +1,26 @@
+.footer
+    padding: 8rem
+    background: $color-footer-bg
+    text-align: center
+    & .row_margin-bottom
+        margin-bottom: 5rem
+    &__list
+        list-style: none
+    &__item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 5rem
+    &__link
+        &:link, &:visited
+            color: $color-white
+            text-transform: uppercase
+            text-decoration: none
+            font-weight: 300
+            display: inline-block
+            transition: all .3s
+        &:active
+        &:hover, &:focus
+            transform: scale(1.2)
+            color: $color-brown-light
+            
+        

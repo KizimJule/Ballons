@@ -1,0 +1,88 @@
+.section-booking
+    padding: 10rem
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+
+.booking
+    height: 50rem
+    background: linear-gradient(107deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 56%, rgba(186,133,84,0) 56%, rgba(161,79,3,0) 100%), url(../img/form_bg.jpg) center / cover no-repeat
+    border-radius: .3rem
+    padding: 5rem
+
+.title-secondary_side
+    text-align: left
+    margin-bottom: 3rem
+.form
+    &__group:not(:last-child)
+        margin-bottom: 2rem
+    &__group:nth-child(3)
+        margin-bottom: 3.8rem
+    &__input
+        width: 34%
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 1.9rem
+        letter-spacing: .2rem
+        color: $color-black
+        padding: 1.8rem 2.2rem
+        background: $color-white
+        box-shadow: $box-shadow-active
+        border-radius: .3rem  
+        border: none
+        border-bottom: 2px solid transparent
+        &:focus
+            outline: none
+            border-bottom: .2rem solid #66D763
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+    &__label
+        color: $color-gray
+        display: block
+        margin-top: 1.1rem
+        margin-left: 1.7rem
+        transition: all .7s
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-2rem)
+
+    &__group-radio
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 2.4rem
+   
+        
+
+    &__input-radio
+        display: none
+
+    &__label-radio
+        cursor: pointer
+        position: relative
+        padding-left: 4rem
+
+    &__btn-radio
+        width: 3rem
+        height: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-brown-light
+        display: block
+        position: absolute
+        top: -.5rem
+        left: 0
+        &::after
+            content: ""
+            display: block
+            border-radius: 50%
+            width: 1.4rem
+            height: 1.4rem
+            background: $color-brown-light
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: al .2s
+    &__input-radio:checked ~ &__label-radio &__btn-radio::after
+        opacity: 1
+
+            

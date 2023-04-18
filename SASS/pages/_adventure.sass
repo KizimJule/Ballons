@@ -1,0 +1,30 @@
+.section-adventure
+    position: relative
+    height: 73.1rem
+    padding-top: 21.6rem
+    padding-bottom: 21.6rem
+    background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url(../img/bg_img_adv.jpg) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 83%)
+
+
+.adventure-card
+    background: $color-card0bg
+    padding: 2.5rem 3rem 3rem 3rem
+    text-align: center
+    border-radius: .5rem
+    backface-visibility: hidden
+    transition: all 0.4s
+
+    &:hover
+        transform: translateY(-1.5rem) scale(1.1)
+    &__icon
+        display: inline-block
+        margin-bottom: 2.4rem
+        font-size: 6rem
+        background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        color: transparent
+
+.text-about__adv
+    letter-spacing: .1rem

@@ -1,0 +1,42 @@
+.header
+    overflow: hidden
+    position: relative
+    height: 74.5rem
+    background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/background_image.jpg) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%)
+    &__logo
+        position: absolute
+        left: 5rem
+        top: 5rem
+    &__box
+        position: absolute
+        top: 46.5%
+        left: 50.5%    
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
+
+.title-first
+    color: $color-white
+    margin-bottom: 5rem
+    &__main
+        display: block
+        font-weight: 700
+        font-size: $font-size-h1
+        line-height: 8rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        animation-name: leftToRight
+        animation-duration: 2s
+        animation-timing-function: ease-in
+        backface-visibility: hidden
+    &__secondary
+        display: block
+        font-weight: 200
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: .4rem
+        animation-name: rightToLeft
+        animation-duration: 2s
+        animation-timing-function: ease-in
+        backface-visibility: hidden

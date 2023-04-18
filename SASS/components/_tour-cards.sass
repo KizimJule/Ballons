@@ -1,0 +1,83 @@
+.tours-card
+    position: relative
+    height: 52rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+
+    &__side
+        height: 52rem
+        transition: .7s all ease-out
+        color: $color-white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        border-radius: .3rem
+        overflow: hidden
+
+        &_front
+            background: $color-white
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient(156.85deg, $color-brown-light 3.65%, $color-brown-darck)
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 15px 40px rgba(0, 0, 0, 0.15)
+            padding-top: 10rem
+            padding-bottom: 10rem
+            text-align: center
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+    &__img
+        height: 24.5rem
+        background-blend-mode: hard-light
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%)
+        margin-bottom: 4.5rem
+        &_1
+            background: $color-brown-light url(../img/img_card/card-1.jpg) center / cover no-repeat
+        &_2
+            background: $color-brown-light url(../img/img_card/card-2.jpg) center / cover no-repeat
+        &_3
+            background: $color-brown-light url(../img/img_card/card-3.jpg) center / cover no-repeat
+    &__title
+        font-weight: 300
+        font-size: 2.8rem
+        line-height: 3.4rem
+        text-align: right
+        text-transform: uppercase
+        position: absolute
+        top: 17.6rem
+        right: 0
+    &__span
+        background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+        padding: 1rem 2rem
+        &_1
+            padding: 1.1rem 2rem 0.5rem 2rem
+        &_2
+            padding: 0.5rem 2rem 1.1rem 2rem
+    &__descr
+    &__list
+        list-style: none
+        color: $color-gray
+        text-align: center
+        // font-weight: 700
+    &__item
+        display: inline-block
+        border-bottom: 0.1rem solid $color-gray
+        &:not(:first-child)
+            padding-top: 2rem
+        
+
+
+.tours-card__text
+    margin-bottom: 8.7rem
+    &_title
+        font-weight: 300
+    &_price
+        font-weight: 500
+        font-size: 60px
+        line-height: 72px
+.button_tour-card
+    padding: 1.5rem 2rem
