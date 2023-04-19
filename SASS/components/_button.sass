@@ -33,6 +33,9 @@
         transition: all .4s
     &:hover .button__text
         font-size: 2.2rem
+        @include respond(tab-land)
+            font-size: 1.8rem
+            
     &__text
         transition: all .7s   
         backface-visibility: hidden       
@@ -73,6 +76,10 @@
         border-radius: 5rem
         transition: all .3s
         box-shadow: $box-shadow-active
+        @include respond(tab-long)
+            font-size: 1.8rem
+            padding: 1rem 1.5rem
+            
     &:hover, &:focus
         box-shadow: $box-shadow-hover
         transform: translateY(-.4rem)
@@ -80,6 +87,7 @@
     &:active
         transform: translateY(0rem)
         box-shadow: $box-shadow-active
+
 .button_brown
     &, &:link, &:visited
         background: $color-brown-light
@@ -87,3 +95,9 @@
     &:hover, &:focus
     &::after
         background: $color-brown-light
+    @include respond(tab-long)
+        &, &:link, &:visited
+            padding: 1rem 3rem 1rem 3rem
+            font-weight: 500
+            font-size: 1.4rem
+    

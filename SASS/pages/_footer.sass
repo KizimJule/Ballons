@@ -2,6 +2,9 @@
     padding: 8rem
     background: $color-footer-bg
     text-align: center
+    @include respond(tab-long)
+        padding: 6rem
+
     & .row_margin-bottom
         margin-bottom: 5rem
     &__list
@@ -10,6 +13,10 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
+        @include respond(tab-long)
+            font-size: 1.4rem
+            &:not(:last-child)
+                margin-right: 3rem
     &__link
         &:link, &:visited
             color: $color-white

@@ -4,7 +4,15 @@
     box-sizing: border-box
 
 html
-    font-size: 62.5%    
+    font-size: 62.5%
+    @include respond(tab-long)
+        font-size: 56.25% //9px
+    @include respond(tab-port)
+        font-size: 50% 
+    @include respond(phone)
+        font-size: 30%
+    @include respond(big-screen)
+        font-size: 75%
 
 body
     font-family: "Roboto", sans-serif
@@ -15,7 +23,6 @@ body
     letter-spacing: .2rem
     padding: 5rem
     background-color: $color-white
-    // overflow: hidden
   
 .container
     background-color: #F7F7F7

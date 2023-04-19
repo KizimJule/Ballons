@@ -1,6 +1,9 @@
 .section-about
     padding-top: 8rem
     padding-bottom: 4.5rem
+    @include respond(tab-long)
+        padding-top: 6rem
+        padding-bottom: 4rem
 
 .title-secondary
     @include title-secondary(transparent)
@@ -16,6 +19,8 @@
     font-size: $font-size-h3
     line-height: 2.4rem
     margin-bottom: 1rem
+    @include respond(tab-long)
+        font-size: 1.8rem 
 
 .text-about
     line-height: 140%

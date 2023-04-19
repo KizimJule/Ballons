@@ -15,6 +15,8 @@
         transform: translate(-50%, -50%)
         width: 100%
         text-align: center
+        @include respond(tab-long)
+             top: 50%
 
 .title-first
     color: $color-white
@@ -30,6 +32,8 @@
         animation-duration: 2s
         animation-timing-function: ease-in
         backface-visibility: hidden
+        @include respond(tab-long)
+            font-size: 4rem
     &__secondary
         display: block
         font-weight: 200
@@ -40,3 +44,7 @@
         animation-duration: 2s
         animation-timing-function: ease-in
         backface-visibility: hidden
+        @include respond(tab-long)
+            font-size: 3.5rem
+            margin-bottom: 3.5rem
+        

@@ -2,7 +2,11 @@
     padding-top: 8rem
     padding-bottom: 8.5rem
     text-align: center
-.row_margin
-    margin-bottom: 8rem
+    @include respond(tab-long)
+        padding-top: 6rem
+        padding-bottom: 6rem
+    & .row_margin
+        margin-bottom: 8rem
+        
 
 

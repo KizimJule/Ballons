@@ -25,3 +25,26 @@
     -webkit-background-clip: text
     text-shadow: $shadow-h2
     color: $color
+    @include respond(tab-long)
+        font-size: 3rem
+
+@mixin desk
+    @media (min-width: 1241px)
+        @content
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 600px)
+            @content
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+    @if $breakpoint == tab-long
+        @media only screen and (max-width: 1240px)
+            @content
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+        
+
+    
