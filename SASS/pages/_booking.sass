@@ -9,10 +9,16 @@
     background: linear-gradient(107deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 56%, rgba(186,133,84,0) 56%, rgba(161,79,3,0) 100%), url(../img/form_bg.jpg) center / cover no-repeat
     border-radius: .3rem
     padding: 5rem
+    @include respond(tab-port)
+        padding: 3rem
+        background: linear-gradient(107deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 66%, rgba(186,133,84,0) 66%, rgba(161,79,3,0) 100%), url(../img/form_bg.jpg) center / cover no-repeat
 
 .title-secondary_side
     text-align: left
     margin-bottom: 3rem
+    @include respond(tab-port)
+        text-align: center
+        margin-bottom: 2rem
 .form
     &__group:not(:last-child)
         margin-bottom: 2rem
@@ -33,6 +39,8 @@
         border-radius: .3rem  
         border: none
         border-bottom: 2px solid transparent
+        @include respond(tab-port)
+            width: 60%
         &:focus
             outline: none
             border-bottom: .2rem solid #66D763

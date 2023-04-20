@@ -5,8 +5,16 @@
     padding-bottom: 21.6rem
     background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url(../img/bg_img_adv.jpg) center / cover no-repeat
     clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 83%)
+    @include desk
+        padding-left: 3rem
+        padding-right: 3rem
     @include respond(tab-long)
         padding-top: 18rem
+    @include respond(tab-port)
+        height: auto
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
+        padding-top: 15rem
+        padding-bottom: 15rem
      
 .adventure-card
     background: $color-card0bg
@@ -15,6 +23,8 @@
     border-radius: .5rem
     backface-visibility: hidden
     transition: all 0.4s
+    @include respond(tab-long)
+        padding: 2rem 2.5rem 2.5rem 2.5rem 
 
     &:hover
         transform: translateY(-1.5rem) scale(1.1)
@@ -29,3 +39,7 @@
 
 .text-about__adv
     letter-spacing: .1rem
+    @include respond(tab-long)
+        font-size: 1.4rem
+    @include desk-big
+        font-size: 1.4rem

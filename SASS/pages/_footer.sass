@@ -4,6 +4,7 @@
     text-align: center
     @include respond(tab-long)
         padding: 6rem
+        padding-bottom: 3rem
 
     & .row_margin-bottom
         margin-bottom: 5rem
@@ -17,6 +18,8 @@
             font-size: 1.4rem
             &:not(:last-child)
                 margin-right: 3rem
+                @include respond(tab-port)
+                    margin-bottom: 3rem
     &__link
         &:link, &:visited
             color: $color-white

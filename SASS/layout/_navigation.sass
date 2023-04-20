@@ -48,6 +48,10 @@
     &__item
         &:not(:last-child)
             margin-bottom: 5.8rem
+            @include respond(tab-long)
+                margin-bottom: 4rem
+            @include respond(tab-port)
+                margin-bottom: 3rem
     &__link
         &:link, &:visited
             text-decoration: none

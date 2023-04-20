@@ -1,5 +1,8 @@
 .composition
     position: relative
+    @include respond(tab-port)
+        height: 32rem
+        
     &__photo
         border-radius: .5rem
         width: 55%
@@ -8,15 +11,28 @@
         backface-visibility: hidden
         transition: all .3s
         outline-offset: .8rem
+        z-index: 10
+        @include respond(tab-port)
+            width: 26rem
         &_n1
             top: 0
             left: 2rem
         &_n3
-            top: 16.4rem
-            left: 4.2rem
+            top: 16rem
+            left: 4rem
+            @include respond(tab-long)
+                top: 12rem
+            @include desk-big
+                top: 12rem
         &_n2
-            top: 8.9rem
-            left: 24rem
+            top: 8rem
+            left: 22rem
+            @include respond(tab-long)
+                top: 6.4rem
+                left: 18rem
+            @include desk-big
+                top: 6.4rem
+                left: 18rem
         &:hover
             outline: .8rem solid $color-brown-light
             transform: scale(1.1)
