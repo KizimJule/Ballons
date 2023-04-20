@@ -5,7 +5,10 @@
     background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/background_image.jpg) center / cover no-repeat
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%)
     @include respond(tab-port)
-        height: 54rem
+        height: 60rem
+    @include respond(phone)
+        height: 74.5rem
+        
     &__logo
         position: absolute
         left: 5rem
@@ -19,5 +22,6 @@
         text-align: center
         @include respond(tab-long)
              top: 50%
-
+        @include respond(phone)
+            top: 55%
         

@@ -3,6 +3,8 @@
     background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
     @include respond(tab-long)
         padding: 8rem
+    @include respond(phone)
+        padding: 4rem
 
 .booking
     height: 50rem
@@ -41,6 +43,8 @@
         border-bottom: 2px solid transparent
         @include respond(tab-port)
             width: 60%
+        @include respond(phone)
+            width: 80%
         &:focus
             outline: none
             border-bottom: .2rem solid #66D763

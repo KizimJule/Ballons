@@ -3,7 +3,8 @@
     height: 52rem
     perspective: 150rem
     -moz-perspective: 150rem
-    
+    @include respond(tab-port)
+        height: auto
     
     &__side
         height: 52rem
@@ -16,10 +17,14 @@
         backface-visibility: hidden
         border-radius: .3rem
         overflow: hidden
-        
+        @include respond(tab-port)
+            height: auto
+            position: relative
         &_front
             background: $color-white
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+            @include respond(tab-port)
+                padding-bottom: 10rem
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(156.85deg, $color-brown-light 3.65%, $color-brown-darck)
@@ -27,8 +32,15 @@
             padding-top: 10rem
             padding-bottom: 10rem
             text-align: center
+            @include respond(tab-port)
+                transform: rotateY(0deg)
+                padding: 10rem 5rem 5rem 5rem
+                clip-path: polygon(0 0, 100% 22%, 100% 100%, 0 100%)
+                margin-top: -10rem
     &:hover &__side_front
         transform: rotateY(-180deg)
+        @include respond(tab-port)
+            transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
     &__img
@@ -69,9 +81,7 @@
         list-style: none
         color: $color-gray
         text-align: center
-        // font-weight: 700
         @include respond(tab-port)
-            width: 50%
             margin: 0 auto
 
     &__item
@@ -79,19 +89,26 @@
         border-bottom: 0.1rem solid $color-gray
         &:not(:first-child)
             padding-top: 2rem
+            @include respond(phone)
+                padding-top: 1.5rem
         @include respond(tab-long)
             font-size: 1.4rem
         @include respond(tab-port)
             font-weight: 600
+
         
 
 
 .tours-card__text
     margin-bottom: 8.7rem
+    @include respond(tab-port)
+        margin-bottom: 3rem
     &_title
         font-weight: 300
     &_price
         font-weight: 500
-        font-size: 60px
-        line-height: 72px
+        font-size: 6rem
+        line-height: 7.2rem
+        @include respond(tab-port)
+            font-size: 5rem
 
