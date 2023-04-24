@@ -81,8 +81,9 @@
         @include respond(tab-long)
             font-size: 1.6rem
             padding: 1rem 1.5rem
-        @include respond(tab-port)
-            padding: 1.5rem 2rem
+        @media only screen and (max-width: 900px), (hover:none)
+            padding: 1rem 1.5rem
+            font-size: 1.4rem
             
     &:hover, &:focus
         box-shadow: $box-shadow-hover
