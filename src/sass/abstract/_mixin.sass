@@ -1,0 +1,55 @@
+//миксины
+@mixin style-link($color)
+    position: relative
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    border: none
+    color: $color
+
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+
+@mixin title-secondary($color)
+    font-weight: 800
+    font-size: $font-size-h2
+    line-height: 4.3rem
+    letter-spacing: 1rem
+    text-align: center
+    text-transform: uppercase
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    text-shadow: $shadow-h2
+    color: $color
+    @include respond(tab-long)
+        font-size: 3rem
+    @include respond(tab-port)
+        font-size: 2.8rem
+
+@mixin desk
+    @media screen and (min-width: 901px) and (max-width: 1001px) 
+        @content
+@mixin desk-big
+    @media screen and (min-width: 1241px) and (max-width: 1410px) 
+        @content
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 600px)
+            @content
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+    @if $breakpoint == tab-long
+        @media only screen and (max-width: 1240px)
+            @content
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+        
+
+    

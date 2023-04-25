@@ -1,0 +1,41 @@
+.section-about
+    padding-top: 8rem
+    padding-bottom: 4.5rem
+    & .row
+        @include respond(tab-long)
+            margin-bottom: 5.5rem
+        @include respond(tab-port)
+            margin-bottom: 0
+    @include desk
+        padding-left: 3rem
+        padding-right: 3rem
+    @include respond(tab-long)
+        padding-top: 6rem
+        padding-bottom: 4rem
+    
+
+.title-secondary
+    @include title-secondary(transparent)
+    margin-bottom: 8rem
+    backface-visibility: hidden
+    transition: all 0.4s
+    @include respond(tab-port)
+        margin-bottom: 4rem
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $shadow-h2-hover
+        @include respond(tab-port)
+            transform: skewY(2deg) skewX(15deg) scale(1.01)
+
+
+
+.text-about
+    line-height: 140%
+    &:not(:last-child)
+        margin-bottom: 4.5rem
+
+// .text-about_margin
+//     margin-bottom: 5.5rem
+//     @include respond(tab-port)
+//         margin-bottom: 0
+
